@@ -1,7 +1,9 @@
 // function.c
-#include "function.h"
+// Функция для вычисления n-го числа Фибоначчи
 size_t fibonacci(size_t n){
+    // Базовый случай: 0-е и 1-е числа Фибоначчи равны 1
     if (n == 0) return 1;
     if (n == 1) return 1;
+    // Рекурсивное вычисление n-го числа Фибоначчи как суммы двух предыдущих
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
