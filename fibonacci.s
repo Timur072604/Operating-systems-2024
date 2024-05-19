@@ -2,11 +2,11 @@
 	.text   // Начало текста программы
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC0:   // Создание строковой константы
-	.string	"Cannot read all the data"
+	.string	"Unable to access all the information\n"
 	.section	.rodata.str1.8,"aMS",@progbits,1
 	.align 8
 .LC1:   // Создание строковой константы
-	.string	"(SUBPROCESS) Fibonacci number %ld is %ld\n"
+	.string	"The Fibonacci number %ld is equivalent to %ld\n"
 	.text
 	.globl	run_fib   // Определение глобальной функции
 	.type	run_fib, @function
@@ -71,14 +71,14 @@ run_fib:
 	.size	run_fib, .-run_fib
 	.section	.rodata.str1.1
 .LC2:   // Создание строковой константы
-	.string	"Hello, World!"
+	.string	"Credit the laboratory, please\n"
 	.section	.rodata.str1.8
 	.align 8
 .LC3:   // Создание строковой константы
-	.string	"Fibonacci number %ld is %ld. (Taken from child process)\n"
+	.string	"The Fibonacci number %ld is %ld, which was obtained from the child process\n"
 	.section	.rodata.str1.1
 .LC4:   // Создание строковой константы
-	.string	"A Child process killed."
+	.string	"The child process was terminated\n"
 	.text
 	.globl	main
 	.type	main, @function
